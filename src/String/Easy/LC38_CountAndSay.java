@@ -1,4 +1,4 @@
-package String;
+package String.Easy;
 /**
  * https://leetcode.com/problems/count-and-say/
  * 

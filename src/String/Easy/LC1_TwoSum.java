@@ -1,4 +1,4 @@
-package String;
+package String.Easy;
 
 public class LC1_TwoSum {
 	public static void main(String[] args){
