@@ -4,11 +4,11 @@ package String.Easy;
  * 
  * Tag: String (Easy)
  * 
- * 输出空格后的最后一串字符串的长度
- * 就注意下前后有空格，没有空格的情况
+ * output the length of the last string before blank
+ * notice string without blank and string with blank at the beginning(end)
  * 
- * 时间复杂度:O(n), 1ms, beats 44.23%
- * 用的函数，没什么可说的
+ * O(n), 1ms, beats 44.23%
+ * using lastIndexOf()
  * 
  */
 public class LC58_LengthOfLastWord {

@@ -4,23 +4,22 @@ package String.Easy;
  * 
  * Tag: String (Easy)
  * 
- * 输出最长公共前缀
- * 就跟想的一样简单，但是还是踩了很多坑，太粗心了你！
+ * easy as thought, be more careful
  * 
- * # 字符串
- * 永远别忘了判空！null！字符串数组也是！
- * 测试首先要从“只有一个”开始：只有一个字符串元素；只有一个字母的字符串
- * 数组的strs.length & 字符串的str.length() 
- * break时记住只跳出一层循环
+ * # string
+ * never forget empty! null!
+ * test begins with "only one": the string with length 1 and the array with size 1
+ * cstr.length & string.length()
+ * "break" only breaks one loop 
  * 
- * 时间复杂度:O(mn), 2ms, beats 63.49%
+ * O(mn), 2ms, beats 63.49%
  * 
  */
 public class LC14_LongestCommonPrefix {
 	public String longestCommonPrefix(String[] strs) {
-        int size = strs.length; // 注意是length不是length()
+        int size = strs.length; 
         if (0 == size){
-            return ""; // 答案是返回""而不是null
+            return ""; 
         }
         
         int minLen = strs[0].length();
@@ -46,6 +45,6 @@ public class LC14_LongestCommonPrefix {
                 break;
             }
         }
-        return strs[0].substring(0, commonLen); // substring不包含后面参数所在的字符
+        return strs[0].substring(0, commonLen); // substring does NOT contains strs[commonLen]
     }
 }

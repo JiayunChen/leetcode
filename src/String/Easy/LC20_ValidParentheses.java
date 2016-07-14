@@ -4,14 +4,11 @@ package String.Easy;
  * 
  * Tag: String (Easy)
  * 
- * 输出最长公共前缀
- * 就跟想的一样简单，但是还是踩了很多坑，太粗心了你！
+ * # bracket matching
+ * using "stack", remember null and the index range
  * 
- * # 括号匹配
- * 其实就是用栈的思想，用char数组就好了，注意下标和判空，别越界
- * 
- * 时间复杂度:O(n), 0ms, beats 96.72%
- * 一次AC
+ * 0ms, beats 96.72%
+ * AC at first!
  * 
  */
 public class LC20_ValidParentheses {

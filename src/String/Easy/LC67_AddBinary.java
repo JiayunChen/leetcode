@@ -4,12 +4,11 @@ package String.Easy;
  * 
  * Tag: String (Easy)
  * 
- * 就是二进制相加
- * 没有考虑转成数字来加，这样转来转去感觉也耗时，而且结果还有长度的问题
- * 直接判断同位是否相同，然后注意一下进位，特别要注意进位用完要重新赋值、最前一位的进位（比如两个1相加）以及两个数长度不一样的时候
+ * binary add
+ * judge a[i] == b[j] and notice the carry especially at the first bit and when the length of strings are different
  * 
- * 时间复杂度:O(n), 3ms, beats 90.73%
- * 由于忘了重新给进位赋值，导致第一次WA，改完才AC。并且还是有依赖Run Code来debug
+ * O(n), 3ms, beats 90.73%
+ * forget to reassign to the carry costing a WA
  * 
  */
 public class LC67_AddBinary {

@@ -1,13 +1,13 @@
 package String.Easy;
 /**
- * https://leetcode.com/problems/reverse-string/
+ * https://leetcode.com/problems/reverse-vowels-of-string/
  * 
  * Tag: String (Easy)
  * 
- * 反转字符串中的元音字母
- * 就注意下大小写，注意下永远别越界，时时判断i<j
+ * reverse the vowels
+ * always remember i < j (think about quick sort)
  * 
- * 时间复杂度:O(n), 5ms, beats 82.54%
+ * O(n), 5ms, beats 82.54%
  * 
  */
 public class LC345_ReverseVowelsOfAString {

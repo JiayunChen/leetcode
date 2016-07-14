@@ -1,16 +1,16 @@
 package String.Easy;
 /**
- * https://leetcode.com/problems/reverse-string/
+ * https://leetcode.com/problems/valid-palindrome/
  * 
  * Tag: String (Easy)
  * 
- * 判断回文数
- * 和反转字符串差不多，就是没注意是字母数字，所以拿了一个WA
+ * returns whether the string is palindrome(abba,abcba)
+ * remember it's alphanumeric not just alpha
  * 
- * 时间复杂度:O(n), 11ms, beats 41.65%
- * 第一种方法先转成小写字母了，这里可能浪费时间
- * 第二种方法手动判断(Math.abs(a-b) == 'a'-'A')这个就可以判大写和小写相同啦
- * 8ms, beats 77.54%
+ * First try: O(n), 11ms, beats 41.65%
+ * 		turning to lower case wastes time
+ * Another try: 8ms, beats 77.54%
+ * 		using (Math.abs(a-b) == 'a'-'A') to compare 'b' with 'B' 
  * 
  */
 public class LC125_ValidPalindrome {
@@ -18,7 +18,7 @@ public class LC125_ValidPalindrome {
 	 * 11ms, beats 41.65%
 	 */
 	public boolean isPalindrome(String s) {
-        char[] t = s.toLowerCase().toCharArray();
+        char[] t = s.toLowerCase().toCharArray(); 
         for (int i = 0, j = t.length-1; i<j; i++, j--){
             while(i < j && !Character.isLetter(t[i]) && !Character.isDigit(t[i])){
                 i++;
