@@ -5,6 +5,7 @@ package String.Easy;
  * Tag: String (Easy)
  * 
  * O(n), 7ms, beats 81.97%
+ * integer from 1~3999
  * 
  */
 public class LC13_RomanToInteger {
@@ -14,9 +15,11 @@ public class LC13_RomanToInteger {
         char[] str = s.toCharArray();
         for (int i = 0; i < len; i++){
             num += value(str[i]);
-            if (i + 1 < len && -1 == compare(str[i], str[i+1])){
-                num += value(str[i+1]) - 2*value(str[i]);
-                i++;
+            if (str[i] == 'I' || str[i] == 'X' || str[i] == 'C'){
+                if (i + 1 < len && value(str[i]) < value(str[i+1])){
+                    num += value(str[i+1]) - 2*value(str[i]);
+                    i++;
+                }
             }
         }
         return num;
@@ -33,21 +36,5 @@ public class LC13_RomanToInteger {
             case 'M': return 1000;
         }
         return 0;
-    }
-    
-    private int compare(char a, char b){
-        if (a == b){
-            return 0;
-        }
-        if (a == 'I'){
-            return -1;
-        }
-        if (a == 'X'){
-            return (b == 'I' || b == 'V')? 1: -1;
-        }
-        if (a == 'C'){
-            return (b == 'D' || b == 'M')? -1: 1;
-        }
-        return 1;
     }
 }
