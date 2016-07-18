@@ -6,7 +6,7 @@ package String.Medium;
  * simple calculate(+ - * /), not including brackets
  * 
  * 27ms, beats 79.16%
- * a little modify changed to 14ms!
+ * then 14ms, beats 94.85%
  * 
  */
 public class LC227_BasicCalculate {
@@ -19,8 +19,8 @@ public class LC227_BasicCalculate {
 	 */
 	public int calculate(String s) {
         int top = 0, len = s.length();
-        int[] stack = new int[len];
         char[] str = s.toCharArray();
+        int[] stack = new int[len];
         char op = '#';
         for (int i = 0, start = 0; i< len; i++){
             while (i < len && str[i] == ' '){
@@ -37,7 +37,7 @@ public class LC227_BasicCalculate {
                     */
                 	int num = str[i++] - '0';
                     while (i < len && str[i] >= '0' && str[i] <= '9'){
-                        num = (str[i] - '0') + num * 10;  // calculate num
+                        num = (str[i] - '0') + num * 10;
                         i++;
                     }
                     
