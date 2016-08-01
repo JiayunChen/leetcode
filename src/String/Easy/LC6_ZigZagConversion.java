@@ -6,7 +6,7 @@ package String.Easy;
  * 
  * output string as the shape of z
  * central idea: calculate the step for each row
- * give fourth try and the best is 5ms
+ * give fourth try and the best is 5ms, beats 96.59%
  *
  */
 public class LC6_ZigZagConversion {
