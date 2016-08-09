@@ -11,6 +11,31 @@ package String.Easy;
  */
 public class LC6_ZigZagConversion {
 	/**
+	 * calculating the step, using char[] is fast
+	 * 
+	 * O(n), 5ms, beats 96.59%!
+	 */
+	public String convert4(String s, int numRows) {
+        int len = s.length();
+        if (len < 2 || numRows < 2){
+            return s;
+        }
+        char[] t = new char[len];
+        char[] str = s.toCharArray();
+        int d = 2 * numRows - 2;
+        for (int i = 0, k = 0; i < numRows; i++){
+            for (int j = i; j < len; j += d){
+                t[k++] = str[j]; // step d for each row
+                if (i > 0 && i < numRows-1 && (j+d-2*i) < len){
+                    t[k++] = str[j+d-2*i]; // add (d-2i) for medium rows
+                }
+            }
+        }
+        return new String(t);
+    }
+		
+	
+	/**
 	 * get the row depending mod
 	 * 
 	 * O(n*q), 44ms, beats 12.73% 
@@ -98,29 +123,4 @@ public class LC6_ZigZagConversion {
         return t;
     }
 
-	
-	/**
-	 * calculating the step, using char[] is fast
-	 * 
-	 * O(n), 5ms, beats 96.59%!
-	 */
-	public String convert4(String s, int numRows) {
-        int len = s.length();
-        if (len < 2 || numRows < 2){
-            return s;
-        }
-        char[] t = new char[len];
-        char[] str = s.toCharArray();
-        int d = 2 * numRows - 2;
-        for (int i = 0, k = 0; i < numRows; i++){
-            for (int j = i; j < len; j += d){
-                t[k++] = str[j]; // step d for each row
-                if (i > 0 && i < numRows-1 && (j+d-2*i) < len){
-                    t[k++] = str[j+d-2*i]; // add (d-2i) for medium rows
-                }
-            }
-        }
-        return new String(t);
-    }
-		
 }

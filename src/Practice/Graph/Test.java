@@ -5,9 +5,7 @@ public class Test {
 		DFSAndBFS test = new DFSAndBFS();
 		System.out.print("DFS: ");
 		test.DFS();
-		System.out.println();
-		System.out.print("BFS: ");
+		System.out.print("\nBFS: ");
 		test.BFS();
-		
 	}
 }
