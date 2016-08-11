@@ -22,7 +22,8 @@ public class LC227_BasicCalculate {
         char[] str = s.toCharArray();
         int[] stack = new int[len];
         char op = '#';
-        for (int i = 0, start = 0; i< len; i++){
+        // int start = 0;
+        for (int i = 0; i< len; i++){
             while (i < len && str[i] == ' '){
                 i++;
             }
