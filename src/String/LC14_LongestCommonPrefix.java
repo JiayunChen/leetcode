@@ -1,4 +1,4 @@
-package String.Easy;
+package String;
 /**
  * https://leetcode.com/problems/longest-common-prefix/
  * 

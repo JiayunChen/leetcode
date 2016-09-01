@@ -1,4 +1,4 @@
-package String.Medium;
+package String;
 
 import java.util.List;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package String.Medium;
+package String;
 /**
  * https://leetcode.com/problems/simplify-path/
  * 
