@@ -8,9 +8,18 @@ package Practice.Graph;
  *  
  *  DFS: ABFIJCDGKEH
  *  BFS: ABCDEFGHIJK
+ *  (Depth-First-Search/Breadth-First-Search)
  *  
  * */
 public class DFSAndBFS {
+	public static void main(String[] args){
+		DFSAndBFS test = new DFSAndBFS();
+		System.out.print("DFS: ");
+		test.DFS();
+		System.out.print("\nBFS: ");
+		test.BFS();
+	}
+	
 	int nVertexs;
 	boolean[] visited;
 	boolean[][] adjMatrix;
