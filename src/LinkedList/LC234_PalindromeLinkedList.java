@@ -5,7 +5,7 @@ package LinkedList;
  * Tag: Linked-list (Easy)
  * 
  * 4ms, beats 15.72%
- * n time, n space
+ * O(n) time, O(n) space
  * 
  */
 public class LC234_PalindromeLinkedList {
