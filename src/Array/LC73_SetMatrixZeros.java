@@ -1,4 +1,4 @@
-package Array.Medium;
+package Array;
 /**
  * https://leetcode.com/problems/set-matrix-zeros/
  * 
