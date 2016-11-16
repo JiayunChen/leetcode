@@ -12,7 +12,7 @@ import java.util.Map;
  * - only 256 characters
  * 
  * Round1: 114ms, beats 7.79%
- * First Medium try, Worst result!!!What have I done= =
+ * First Medium try, Worst result!!!What have I done = =
  * It must be an O(n) way
  * 
  * Round2: 16ms, beats 71.75% 
@@ -50,7 +50,7 @@ public class LC3_LongestSubstringWithoutRepeatingCharacters {
 	 * 16ms, beats 71.75%
 	 * use the map to record the index
 	 * the "Map" stucture costs time
-	 */
+	 
 	public int lengthOfLongestSubstring2(String s) {
 		Map map = new HashMap();
         char[] str = s.toCharArray();
@@ -69,7 +69,7 @@ public class LC3_LongestSubstringWithoutRepeatingCharacters {
             }
         }
         return max;
-    }
+    }*/
 	
 	/**
 	 * 114ms, beats 7.79%

@@ -9,7 +9,7 @@ import java.util.List;
  * 
  * Tag: String (Medium)
  * 
- * recursion¡¢BFS(queue)¡¢DFS(stack)
+ * recursion BFS(queue) DFS(stack)
  * all uses 1ms, beats 46.16% = =
  * 
  */
@@ -24,7 +24,7 @@ public class LC17_LetterCombinationsOfAPhoneNumber {
 	 * -- ...
 	 */
 	public List<String> letterCombinations3(String digits) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         char[] str = digits.toCharArray();
         int len = str.length;
         if (len > 0){
@@ -105,7 +105,7 @@ public class LC17_LetterCombinationsOfAPhoneNumber {
 	 * --          ae af bd be bf cd ce cf adg adh adi
 	 */
 	public List<String> letterCombinations2(String digits) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         char[] str = digits.toCharArray();
         int len = str.length;
         if (len > 0){
@@ -148,7 +148,7 @@ public class LC17_LetterCombinationsOfAPhoneNumber {
 	 * 
 	 */
 	public List<String> letterCombinations(String digits) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         char[] str = digits.toCharArray();
         int len = str.length;
         if (len > 0){
